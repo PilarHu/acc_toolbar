@@ -1,72 +1,4 @@
 {
-  "he-IL": {
-    "btn_open": "תפריט נגישות",
-    "btn_close": "סגור",
-    "keyboard_root": "ניווט מקלדת",
-    "disable_animattions": "חסימת אנימציות",
-    "access_declaration": "הצהרת נגישות",
-    "debug_contacts": "דווח על בעיית נגישות",
-    "reset_all_settings": "בטל נגישות",
-    "image_without_alt": "תמונה ללא תיאור",
-    "contrast_block": {
-      "header": "ניגודיות צבעים",
-      "btn_monochrome": "תצוגת<br>מונוכרום",
-      "btn_bright": "ניגודיות<br>בהירה",
-      "btn_invert": "ניגודיות<br>הפוכה"
-    },
-    "text_block": {
-      "header": "גודל טקסט",
-      "btn_font_up": "הגדלת<br>גופון",
-      "btn_font_down": "הקטנת<br>גופון",
-      "btn_font_readable": "גופון<br>קריא"
-    },
-    "content_block": {
-      "header": "הדגשת תוכן",
-      "btn_underline_links": "הדגשת<br>קישורים",
-      "btn_underline_headers": "הדגשת<br>כותרות",
-      "btn_images_titles": "תיאור<br>לתמונות"
-    },
-    "zoom_block": {
-      "header": "הגדלת תצוגה",
-      "btn_cursor_white": "סמן לבן<br>גדול",
-      "btn_cursor_black": "סמן שחור<br>גדול",
-      "btn_zoom_in": "הגדלת<br>תצוגה"
-    }
-  },
-  "ru-RU": {
-    "btn_open": "Меню доступности",
-    "btn_close": "Закрыть",
-    "keyboard_root": "Навигация с клавиатуры",
-    "disable_animattions": "Блокировать анимацию",
-    "access_declaration": "Декларация доступности",
-    "debug_contacts": "Сообщить о проблеме",
-    "reset_all_settings": "Сбросить настройки",
-    "image_without_alt": "изображение без текста",
-    "contrast_block": {
-      "header": "Цветовой контраст",
-      "btn_monochrome": "монохр. дисплей",
-      "btn_bright": "светлый контраст",
-      "btn_invert": "инверт. контраст"
-    },
-    "text_block": {
-      "header": "Размер текста",
-      "btn_font_up": "увелич. шрифта",
-      "btn_font_down": "уменьш. шрифта",
-      "btn_font_readable": "читаемый шрифт"
-    },
-    "content_block": {
-      "header": "Выделение содержимого",
-      "btn_underline_links": "выдел. ссылки",
-      "btn_underline_headers": "выдел. заголовки",
-      "btn_images_titles": "названия картинок"
-    },
-    "zoom_block": {
-      "header": "Увеличение контента",
-      "btn_cursor_white": "белый курсор",
-      "btn_cursor_black": "черный курсор",
-      "btn_zoom_in": "увелич. дисплея"
-    }
-  },
   "en": {
     "btn_open": "accessibility menu",
     "btn_close": "close",
@@ -101,38 +33,38 @@
       "btn_zoom_in": "zoom<br>screen"
     }
   },
-  "fr_FR": {
-    "btn_open": "menu d'accessibilité",
-    "btn_close": "fermer",
-    "keyboard_root": "navigation au clavier",
-    "disable_animattions": "désactiver les animations",
-    "access_declaration": "déclaration d'accessibilité",
-    "debug_contacts": "signaler un problème d'accessibilité",
-    "reset_all_settings": "réinitialiser les paramètres",
-    "image_without_alt": "image sans texte",
+  "hu-HU": {
+    "btn_open": "Hozzáférhetőség menü",
+    "btn_close": "Bezárás",
+    "keyboard_root": "Billentyűzetes navigáció",
+    "disable_animattions": "Animációk kikapcsolása",
+    "access_declaration": "Hozzáférhetőség nyilatkozat",
+    "debug_contacts": "Hozzáférhetőségi probléma jelentése",
+    "reset_all_settings": "Beállítások visszaállítása",
+    "image_without_alt": "Szöveg nélküli képek",
     "contrast_block": {
-      "header": "contraste des couleurs",
-      "btn_monochrome": "affichage<br>sans couleur",
-      "btn_bright": "contraste<br>lumineux",
-      "btn_invert": "couleurs<br>inversées"
+      "header": "szín kontraszt",
+      "btn_monochrome": "fekete-<br>fehér",
+      "btn_bright": "világos<br>kontraszt",
+      "btn_invert": "színek<br>cseréje"
     },
     "text_block": {
-      "header": "taille de police",
-      "btn_font_up": "augmenter<br>la taille",
-      "btn_font_down": "diminuer<br>la taille",
-      "btn_font_readable": "texte<br>lisible"
+      "header": "szöveg méret",
+      "btn_font_up": "nagyobb<br>szöveg",
+      "btn_font_down": "kisebb<br>szöveg",
+      "btn_font_readable": "könnyített<br>betűtípus"
     },
     "content_block": {
-      "header": "mettre en évidence le contenu",
-      "btn_underline_links": "souligner<br>les liens",
-      "btn_underline_headers": "souligner<br>les en-têtes",
-      "btn_images_titles": "titres<br>d'images"
+      "header": "tartalom kiemelése",
+      "btn_underline_links": "linkek<br>aláhúzása",
+      "btn_underline_headers": "alcímek<br>aláhúzása",
+      "btn_images_titles": "kép<br>címek"
     },
     "zoom_block": {
-      "header": "zoomer",
-      "btn_cursor_white": "gros curseur<br>blanc",
-      "btn_cursor_black": "gros curseur<br>noir",
-      "btn_zoom_in": "élargir<br>l'écran"
+      "header": "zoom",
+      "btn_cursor_white": "nagy fehér<br>mutató",
+      "btn_cursor_black": "nagy fekete<br>mutató",
+      "btn_zoom_in": "képernyő<br>zoomolása"
     }
   }
 }
