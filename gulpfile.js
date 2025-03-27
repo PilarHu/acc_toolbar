@@ -1,37 +1,36 @@
-var gulp           = require('gulp'),
-		gutil          = require('gulp-util' ),
-		gulpSass           = require('gulp-sass'),
-		browserSync    = require('browser-sync'),
-		concat         = require('gulp-concat'),
-		uglify         = require('gulp-uglify'),
-		cleanCSS       = require('gulp-clean-css'),
-		rename         = require('gulp-rename'),
-		cache          = require('gulp-cache'),
-		autoprefixer   = require('gulp-autoprefixer'),
-		notify         = require("gulp-notify"),
-		fileinclude 	 = require('gulp-file-include'),
-		htmlmin 	 		 = require('gulp-htmlmin'),
-		rimraf         = require("rimraf");
+var gulp = require('gulp'),
+	gulpSass = require('gulp-sass')(require('sass')),
+	browserSync = require('browser-sync'),
+	concat = require('gulp-concat'),
+	uglify = require('gulp-uglify'),
+	cleanCSS = require('gulp-clean-css'),
+	rename = require('gulp-rename'),
+	cache = require('gulp-cache'),
+	autoprefixer = require('gulp-autoprefixer').default,
+	notify = require("gulp-notify"),
+	fileinclude = require('gulp-file-include'),
+	htmlmin = require('gulp-htmlmin'),
+	rimraf = require("rimraf");
 
 function minifyHtml(cb) {
-  gulp.src('app/htmlparts/**/*.html')
-  .pipe(htmlmin({collapseWhitespace: true}))
-  .pipe(gulp.dest('app/htmlmin'))
-  setTimeout(() => cb(), 100);
+	gulp.src('app/htmlparts/**/*.html')
+		.pipe(htmlmin({ collapseWhitespace: true }))
+		.pipe(gulp.dest('app/htmlmin'))
+	setTimeout(() => cb(), 100);
 }
 
 function commonJs(cb) {
 	gulp.src([
-	'app/js/**/*.js',
+		'app/js/**/*.js',
 	])
-	.pipe(fileinclude({
-      prefix: '@@',
-      basepath: '@file'
-   }))
-	.pipe(rename({suffix: '.min', prefix : ''}))
-	.pipe(uglify())
-	.pipe(gulp.dest('app/minjs'))
-	.pipe(browserSync.stream());
+		.pipe(fileinclude({
+			prefix: '@@',
+			basepath: '@file'
+		}))
+		.pipe(rename({ suffix: '.min', prefix: '' }))
+		.pipe(uglify())
+		.pipe(gulp.dest('app/minjs'))
+		.pipe(browserSync.stream());
 	cb();
 }
 
@@ -48,32 +47,33 @@ function browser(cb) {
 
 function code(cb) {
 	gulp.src('app/*.html')
-	.pipe(browserSync.stream());
+		.pipe(browserSync.stream());
 	cb();
 }
 
 function sass(cb) {
 	gulp.src('app/scss/**/*.scss')
-	.pipe(gulpSass({
-		outputStyle: 'expand'}).on("error", notify.onError()))
-	.pipe(rename({suffix: '.min', prefix : ''}))
-	.pipe(autoprefixer(['last 2 versions']))
-	.pipe(cleanCSS()) // comment on debug
-	.pipe(gulp.dest('app/css'))
+		.pipe(gulpSass({
+			style: 'expanded'
+		}).on("error", notify.onError()))
+		.pipe(rename({ suffix: '.min', prefix: '' }))
+		.pipe(autoprefixer({ overrideBrowserslist: ['last 2 versions'] }))
+		.pipe(cleanCSS()) // comment on debug
+		.pipe(gulp.dest('app/css'))
 	setTimeout(() => cb(), 100);
-	
+
 }
 
 function files(cb) {
 	setTimeout(() => {
 		gulp.src([
-		'app/minjs/common.min.js'
+			'app/minjs/common.min.js'
 		])
-		.pipe(rename('acctoolbar.min.js'))
-		.pipe(gulp.dest('acctoolbar'));
+			.pipe(rename('acctoolbar.min.js'))
+			.pipe(gulp.dest('acctoolbar'));
 		gulp.src([
 			'app/cursors/**/*',
-			]).pipe(gulp.dest('acctoolbar/cursors'));
+		]).pipe(gulp.dest('acctoolbar/cursors'));
 		cb();
 	}, 500);
 }
@@ -82,9 +82,9 @@ function remDist(cb) {
 	rimraf('acctoolbar', cb);
 }
 
-function clearCache (cb) { 
+function clearCache(cb) {
 	cache.clearAll();
-	cb(); 
+	cb();
 }
 
 function watch(cb) {
